@@ -5,10 +5,10 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
     if (existingItem){
         return cartItems.map(cartItem => 
             cartItem.id === cartItemToAdd.id
-                ? {...cartItem, quiantity: cartItem.quiantity + 1}
+                ? {...cartItem, quantity: cartItem.quantity + 1}
                 : cartItem
         )
     }
 
-    return [...cartItems, {...cartItemToAdd, quiantity:1}]
+    return [...cartItems, {...cartItemToAdd, quantity:1}]
 }
